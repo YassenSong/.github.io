@@ -86,6 +86,10 @@ from t_zhba_sp sp group by sp.c_tqnr`
 
 `select trim(lc_wsid,';') from t_zhba_rwsl`
 
+**11、判断字符串中是否包含某个字符串**
+
+`select * from t_zhba_wtxs where strpos(c_cbr,'e3999b93474f4100a1eae2fd0f418951') != 0`
+
 ### 3.分组排序
 
 **1、ROW_NUMBER() OVER(PARTITION BY COLUMN ORDER BY COLUMN)**
@@ -98,25 +102,25 @@ from t_zhba_sp sp group by sp.c_tqnr`
 
 ### 1、将本地仓库推送到远端
 
-- **初始化本地仓库**
+**1、初始化本地仓库**
 
-  `git init`
+`git init`
 
-- **提交所有文件到暂存区**
+**2、提交所有文件到暂存区**
 
-  `git add .`
+`git add .`
 
-- **推到本地仓库**
+**3、推到本地仓库**
 
-  `git commit -m “description”`
+`git commit -m “description”`
 
-- **本地仓库和远程仓库建立连接**
+**4、本地仓库和远程仓库建立连接**
 
-  `git remote add origin https://github.com/YassenSong/documents.git`
+`git remote add origin https://github.com/YassenSong/documents.git`
 
-- **推送到dev远程分支**
+**5、推送到dev远程分支**
 
-  `git push -u origin master`
+`git push -u origin master`
 
 ### 2、git 清除缓存
 
